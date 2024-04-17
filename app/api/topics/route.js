@@ -8,3 +8,16 @@ export async function POST(request) {
     await Topic.create({ title, information, priority, statuses });
     return NextResponse.json({message: "Task Created" }, { status: 201 });
 }
+
+export async function GET() {
+    await connectMongoDB();
+    const topics = await Topic.find();
+    return NextResponse.json({ topics });
+}
+
+export async function DELETE(request) {
+    const id = request.nextUrl.searchParams.get("id");
+    await connectMongoDB();
+    await Topic.findByIdAndDelete(id);
+    return NextResponse.json({message: "Task Deleted" }, { status: 200 }); 
+}
