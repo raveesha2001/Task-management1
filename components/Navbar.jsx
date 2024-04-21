@@ -7,7 +7,7 @@ export default function Navbar() {
             <Link className="text-white font-bold" href={"/"}>
                 Task Management System
             </Link>
-            <Link className="bg-black p-2" 
+            <Link className="bg-white p-2" 
             href={"/addTopic"}>
                 Add Task
             </Link>

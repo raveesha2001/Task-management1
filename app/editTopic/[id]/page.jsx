@@ -1,4 +1,4 @@
 import EditTopicForm from "@/components/editTopicForm"
-export default function editTopic() {
+export default function EditTopic() {
     return <EditTopicForm />;
 }

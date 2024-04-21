@@ -3,10 +3,10 @@ import mongoose, { Schema } from "mongoose";
 
 const topicSchema = new Schema(
     {
-        title: String,
-        informaton: String,
-        priority: String,
-        statuses: String,
+        Title: String,
+        Informaton: String,
+        Priority: String,
+        Statuses: String,
     
 
 
